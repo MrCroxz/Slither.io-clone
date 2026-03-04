@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slither Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+  
+  <div id="menu" class="overlay-menu">
+    <h1>Slither.io (Clone 😈)</h1>
+    <p>Made by @MrCroxz</p>
+    <p>Eat food to grow. Avoid other snakes!</p>
+    <div id="highScore">High Score: 0</div>
+    <div class="color-selector">
+      <label>Snake Color:</label>
+      <div id="swatchPicker">
+        <div id="currentSwatch" class="swatch selected" data-color="#00ffff" style="background:#00ffff"></div>
+        <div id="swatchOptions" class="swatch-options hidden">
+          <span class="swatch" data-color="#00ffff" style="background:#00ffff"></span>
+          <span class="swatch" data-color="#ff00ff" style="background:#ff00ff"></span>
+          <span class="swatch" data-color="#00ff00" style="background:#00ff00"></span>
+          <span class="swatch" data-color="#ffff00" style="background:#ffff00"></span>
+          <span class="swatch" data-color="#ff6600" style="background:#ff6600"></span>
+        </div>
+      </div>
+    </div>
+    <button id="startBtn">Start Game</button>
+  </div>
+  
+  <div id="pause" class="overlay-pause">
+    <h1>PAUSED</h1>
+    <button id="resumeBtn">Resume Game</button>
+    <button id="mainMenuBtn">Back to Menu</button>
+  </div>
+  
+  <div id="hud">
+    <div id="score">Score: 0</div>
+    <div id="status">High Score: 0 | Move mouse, hold to boost</div>
+  </div>
+  
+  <script src="game.js"></script>
+</body>
+</html>

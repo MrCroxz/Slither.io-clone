@@ -1,0 +1,194 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: #05050a; font-family: Arial, sans-serif; }
+canvas { display: block; width: 100vw; height: 100vh; background: #05050a; }
+#hud { position: fixed; top: 20px; right: 20px; color: #0ff; font-size: 16px; font-weight: bold; text-shadow: 0 0 8px #0ff; }
+#score { margin-bottom: 10px; }
+#status { font-size: 12px; opacity: 0.8; }
+
+.overlay-menu {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 5, 10, 0.95);
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  min-width: 300px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-menu h1 {
+  color: #0ff;
+  font-size: 48px;
+  margin: 0 0 10px 0;
+  text-shadow: 0 0 15px #0ff;
+}
+
+.overlay-menu p {
+  color: #aff;
+  font-size: 16px;
+  margin: 0 0 30px 0;
+}
+
+#highScore {
+  color: #ffff00;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #ffff00;
+}
+
+.color-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.color-selector label {
+  color: #aff;
+  font-size: 16px;
+}
+
+.color-selector input[type="color"] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.swatch {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.swatch.selected {
+  box-shadow: 0 0 10px #fff;
+}
+
+.swatch-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.swatch-options.hidden {
+  display: none;
+}
+
+.overlay-menu button {
+  background: linear-gradient(90deg, #0ff, #00ffaa);
+  border: none;
+  color: #000;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.overlay-menu button:hover {
+  box-shadow: 0 0 15px #0ff;
+  transform: scale(1.05);
+}
+
+.overlay-pause {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 5, 10, 0.9);
+  border: 2px solid #ff0;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.3);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overlay-pause h1 {
+  color: #ff0;
+  font-size: 36px;
+  margin: 0;
+  text-shadow: 0 0 10px #ff0;
+}
+
+.overlay-pause button {
+  background: #ff6600;
+  border: none;
+  color: #000;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.overlay-pause button:hover {
+  box-shadow: 0 0 10px #ff6600;
+  transform: scale(1.05);
+}
+
+.overlay-death {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 5, 10, 0.9);
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.overlay-death h2 {
+  color: #ff0000;
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+#finalScore {
+  color: #ffff00;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px #ffff00;
+}
+
+.overlay-death button {
+  background: #ff6600;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+.overlay-death button:hover {
+  box-shadow: 0 0 10px #ff6600;
+  transform: scale(1.05);
+}
