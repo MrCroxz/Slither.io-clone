@@ -18,7 +18,7 @@
   canvas.addEventListener('mousedown', () => { mouse.down = true; });
   canvas.addEventListener('mouseup', () => { mouse.down = false; });
 
-  // send input at 60hz
+  // send input
   setInterval(() => {
     // compute angle relative to screen center
     const cx = W / 2, cy = H / 2;
@@ -41,7 +41,7 @@
     UI.setStatus('Playing!');
   });
 
-  // auto-join on page load with random name and color
+  // auto join on page load with random name and color
   function autoJoin() {
     const adjectives = ['Swift', 'Clever', 'Bold', 'Fierce', 'Mystic', 'Silent', 'Quick', 'Agile'];
     const animals = ['Viper', 'Cobra', 'Python', 'Adder', 'Boa', 'Mamba', 'Dragon', 'Serpent'];
